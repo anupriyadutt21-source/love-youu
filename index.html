@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>something i made for you</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    background:#050505;
+    color:#f4f1ed;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow:hidden;
+}
+
+.screen{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.content{
+    width:100%;
+    max-width:720px;
+    animation:appear 0.9s ease;
+}
+
+.small{
+    color:#666;
+    font-family:monospace;
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:28px;
+}
+
+h1{
+    font-size:clamp(38px,9vw,78px);
+    font-weight:300;
+    line-height:1.05;
+    letter-spacing:-4px;
+    margin-bottom:32px;
+}
+
+.text{
+    color:#aaa;
+    font-size:clamp(16px,4vw,21px);
+    line-height:1.8;
+    font-weight:300;
+}
+
+.quote{
+    font-size:clamp(26px,6vw,48px);
+    line-height:1.4;
+    font-weight:300;
+}
+
+.final{
+    font-size:clamp(27px,6vw,54px);
+    line-height:1.4;
+    font-weight:300;
+}
+
+.signature{
+    margin-top:40px;
+    color:#666;
+    font-family:monospace;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+button{
+    margin-top:42px;
+    padding:15px 30px;
+    border:1px solid #333;
+    border-radius:50px;
+    background:transparent;
+    color:#eee;
+    font-family:monospace;
+    font-size:11px;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#151515;
+    border-color:#aaa;
+    transform:translateY(-2px);
+}
+
+.dots{
+    margin-top:28px;
+    color:#555;
+    letter-spacing:8px;
+    animation:blink 1.5s infinite;
+}
+
+.bar{
+    width:100%;
+    height:2px;
+    background:#171717;
+    margin:35px 0;
+}
+
+.fill{
+    width:0;
+    height:100%;
+    background:#ddd;
+    animation:load 3s forwards;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes blink{
+
+    0%,100%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+@keyframes load{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- PAGE 1 -->
+
+<div class="screen" id="page1">
+
+    <div class="content">
+
+        <div class="small">
+            a little something
+        </div>
+
+        <h1>
+            hello,<br>
+            veduuu.
+        </h1>
+
+        <div class="text">
+            i wanted to make you something.
+        </div>
+
+        <div class="dots">
+            ···
+        </div>
+
+        <button onclick="nextPage(1)">
+            START →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 2 -->
+
+<div class="screen hidden" id="page2">
+
+    <div class="content">
+
+        <div class="small">
+            attempt 01
+        </div>
+
+        <h1>
+            i tried making<br>
+            a normal gift.
+        </h1>
+
+        <div class="text">
+            it looked too normal.
+            <br><br>
+            so i deleted it.
+        </div>
+
+        <button onclick="nextPage(2)">
+            TRY AGAIN →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 3 -->
+
+<div class="screen hidden" id="page3">
+
+    <div class="content">
+
+        <div class="small">
+            attempt 02
+        </div>
+
+        <h1>
+            okay.
+        </h1>
+
+        <div class="text">
+            let's build something
+            <br>
+            a little less normal.
+        </div>
+
+        <button onclick="nextPage(3)">
+            BUILD IT →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 4 -->
+
+<div class="screen hidden" id="page4">
+
+    <div class="content">
+
+        <div class="small">
+            constructing
+        </div>
+
+        <h1>
+            building<br>
+            something...
+        </h1>
+
+        <div class="bar">
+            <div class="fill"></div>
+        </div>
+
+        <div class="text">
+
+            01% — memories<br>
+            17% — chaos<br>
+            43% — missing you<br>
+            68% — things i never say<br>
+            91% — us<br>
+            100% — still not enough
+
+        </div>
+
+        <button onclick="nextPage(4)">
+            CONTINUE →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 5 -->
+
+<div class="screen hidden" id="page5">
+
+    <div class="content">
+
+        <div class="small">
+            system created
+        </div>
+
+        <h1>
+            apparently,<br>
+            i made a universe.
+        </h1>
+
+        <div class="text">
+            and somehow you're
+            <br>
+            at the center of it.
+        </div>
+
+        <button onclick="nextPage(5)">
+            LOOK AROUND →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 6 -->
+
+<div class="screen hidden" id="page6">
+
+    <div class="content">
+
+        <div class="small">
+            things i could have said
+        </div>
+
+        <div class="quote">
+
+            you became important
+            <br>
+            without asking permission.
+
+        </div>
+
+        <br><br>
+
+        <div class="text">
+
+            somewhere between the stupid conversations,
+            random moments, annoying habits,
+            and everything in between...
+
+            <br><br>
+
+            you became one of my favourite parts of life.
+
+        </div>
+
+        <button onclick="nextPage(6)">
+            ONE MORE THING →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 7 -->
+
+<div class="screen hidden" id="page7">
+
+    <div class="content">
+
+        <div class="small">
+            error 404
+        </div>
+
+        <h1>
+            normal life<br>
+            not found.
+        </h1>
+
+        <div class="text">
+
+            side effects include:
+
+            <br><br>
+
+            missing you for absolutely no reason
+            <br>
+            smiling at random messages
+            <br>
+            overthinking tiny things
+            <br>
+            and somehow still choosing you
+
+        </div>
+
+        <button onclick="nextPage(7)">
+            KEEP GOING →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 8 -->
+
+<div class="screen hidden" id="page8">
+
+    <div class="content">
+
+        <div class="small">
+            final build
+        </div>
+
+        <h1>
+            okay, veduuu.
+        </h1>
+
+        <div class="text">
+
+            i could've filled this with
+            a hundred fancy things.
+
+            <br><br>
+
+            animations.
+            <br>
+            pictures.
+            <br>
+            paragraphs.
+            <br>
+            cheesy lines.
+
+            <br><br>
+
+            but none of them really explain
+            what you mean to me.
+
+        </div>
+
+        <button onclick="nextPage(8)">
+            SO WHAT DOES? →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 9 -->
+
+<div class="screen hidden" id="page9">
+
+    <div class="content">
+
+        <div class="small">
+            the actual gift
+        </div>
+
+        <div class="final">
+
+            you were never supposed
+            <br>
+            to be a website.
+
+            <br><br>
+
+            you were the reason
+            <br>
+            there had to be one.
+
+        </div>
+
+        <div class="signature">
+
+            happy boyfriend's day,
+            my veduuu ♡
+
+        </div>
+
+        <button onclick="nextPage(9)">
+            STAY A LITTLE LONGER →
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PAGE 10 -->
+
+<div class="screen hidden" id="page10">
+
+    <div class="content">
+
+        <div class="small">
+            one last thing
+        </div>
+
+        <div class="text">
+
+            i don't need this website to be perfect.
+
+            <br><br>
+
+            i just wanted you to have something
+            that came completely from me.
+
+            <br><br>
+
+            something you could open whenever
+            you miss me.
+
+            <br><br>
+
+            and maybe, for a tiny second,
+            feel like i'm right there.
+
+        </div>
+
+        <br><br>
+
+        <div class="final">
+
+            babdi mi ithech ae
+            <br>
+            tujhya sobt kayam 🤍
+
+        </div>
+
+        <div class="signature">
+            — anupriya
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+function nextPage(current){
+
+    var currentPage =
+        document.getElementById("page" + current);
+
+    var nextPage =
+        document.getElementById("page" + (current + 1));
+
+    currentPage.classList.add("hidden");
+
+    nextPage.classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
